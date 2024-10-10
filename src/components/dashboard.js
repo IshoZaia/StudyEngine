@@ -11,9 +11,17 @@ const Dashboard = () => {
   };
 
   const handleFileSubmit = (event) => {
+    const formData = new FormData();
+    formData.append("file", file);
     event.preventDefault();
-    // Handle file upload
     console.log(file);
+    fetch("http://localhost:8000/api/uploadFile", {
+      method: "POST",
+      body: formData
+    }).then((response) => {
+      console.log(response);
+    });
+
   };
 
   const handleSettingsSubmit = (event) => {

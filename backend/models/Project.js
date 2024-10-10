@@ -15,7 +15,7 @@ const projectSchema = new mongoose.Schema({
 const questionSchema = new mongoose.Schema({
     answer: { type: String, required: true },
     choices: { type: [String], required: true },
-    id: { type: Number, required: true, unique: true }, // Ensure each question has a unique ID
+    id: { type: Number, required: true, unique: true },
     text: { type: String, required: true }
 });
 
